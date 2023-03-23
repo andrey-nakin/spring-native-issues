@@ -1,0 +1,8 @@
+sample-data:
+  data:
+    - id: "0643c6eb-e9f3-4537-83fa-69f7f3c807dc"
+      name: a
+      val: b
+    - id: "f95c9c75-91ed-4114-a880-e5a401568fb0"
+      name: c
+      val: d
