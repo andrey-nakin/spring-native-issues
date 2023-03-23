@@ -119,3 +119,15 @@ java.lang.ClassCastException: com.example.demo.entity.SampleEntity cannot be cas
 	at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:775) ~[com.example.demo.DemoApplication:na]
 	at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:203) ~[na:na]
 ```
+
+## Known workarounds
+
+### Avoid using `Stream<>` as a repository method's return value.
+
+Problem is gone when changed the repository to the following:
+
+```java
+public interface SampleRepository extends JpaRepository<SampleEntity, Integer> {
+    List<SampleEntity> findAllByOrderByName();
+    ...
+```
