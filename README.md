@@ -9,7 +9,9 @@ The problem is caused by a custom `factory` definition in `SampleDataProperties`
 
 @Component
 @ConfigurationProperties("sample-data")
-@PropertySource(value = "classpath:sample-data.yaml", factory = YamlPropertySourceFactory.class)
+@PropertySource(
+        value = "classpath:sample-data.yaml", 
+        factory = YamlPropertySourceFactory.class)
 public class SampleDataProperties {
     ...
 ```
