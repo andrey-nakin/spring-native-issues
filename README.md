@@ -19,7 +19,7 @@ and its usage in a controller:
         return repository.findAllByOrderByName().findFirst().orElseThrow();
 ```
 
-The `findFirst()` invocation in the code above causes exception.
+The `findFirst()` invocation in the code above causes `ClassCastException` exception.
 
 ## Steps to reproduce
 
